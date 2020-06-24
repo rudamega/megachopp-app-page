@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon d-flex justify-content-between">
   <%= link_to root_path do %>
-    <%= image_tag "https://res.cloudinary.com/dpjghjtp1/image/upload/v1590861380/ptbzhlcdphdr5ske3le74oifp5ab.png", height: 50, width: 50, crop: :fill, class: "dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <%= image_tag "https://res.cloudinary.com/dpjghjtp1/image/upload/v1590861380/ptbzhlcdphdr5ske3le74oifp5ab.png", height: 50, width: 50, crop: :fill%>
   <% end %>
     <%if user_signed_in? %>
         <%if current_user.cart%>

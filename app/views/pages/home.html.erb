@@ -1,2 +1,10 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+<div class="footer">
+  <%= link_to "https://api.whatsapp.com/send?phone=595994808080&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20MegaChopp" do %>
+    <%=cl_image_tag("whatsapp_sgel70", height: 45, width: 45, crop: :fill, class: "whatsapp")%>
+  <% end %>
+  <%= link_to "tel:0994808080", class: "footer-inside" do  %>
+  <div> <%=cl_image_tag("phone_amfyy8", height: 15, width: 15, crop: :fill)%> - LLamar </div>
+  <% end %>
+</div>
