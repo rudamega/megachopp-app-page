@@ -1,0 +1,33 @@
+.footer {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-inside {
+  height: 40px;
+  width: 80%;
+  border-radius: 25px;
+  background-color: #0c3;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-inside img {
+  padding: 0;
+  margin: 0;
+}
+
+.footer h5 {
+  color: black;
+}
+.footer-white {
+  height: 45px;
+  background-color: white;
+}
