@@ -13,7 +13,7 @@
   width: 80%;
   border-radius: 25px;
   background-color: #0c3;
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,4 +30,16 @@
 .footer-white {
   height: 45px;
   background-color: white;
+}
+.whatsapp {
+  border-radius: 50%;
+  position: absolute;
+  right: 25px;
+  bottom: 70px;
+}
+
+@media (min-width: 400px) {
+  .footer-inside {
+    display: none;
+  }
 }
