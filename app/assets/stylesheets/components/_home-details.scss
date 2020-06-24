@@ -1,0 +1,18 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+.home-details {
+  display: flex;
+  border: 3px solid #ffc827;
+  height: 70px;
+  width: 50%;
+  margin: 20px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+
+}
