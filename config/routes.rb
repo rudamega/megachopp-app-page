@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :cars do
-    resources :combustibles, only: [:new]
+    resources :combustibles, only: [:new, :create]
   end
   devise_for :users
   root to: 'pages#home'

@@ -1,2 +1,19 @@
-<h1>Combustibles#new</h1>
-<p>Find me in app/views/combustibles/new.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h3>NUEVA CARGA DE COMBUS</h3>
+
+      <%= simple_form_for [@car, @combustible] do |f| %>
+        <%= f.input :liters, label: "Litros"%>
+        <%= f.input :total_price, label: "Precio total Gs"%>
+        <%= f.input :kilometers, label: "Kilometraje"%>
+        <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
+        <%= f.input :photo, input_html: { class: 'd-none', id: 'photo-input' }, label_html: { class: 'upload-photo'}, label: '📷 Upload an item' %>
+        <div class="d-flex justify-content-center">
+        <%= f.submit "Crear Vehículo"%>
+        </div>
+      <% end %>
+      <%= link_to 'Back', root_path, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+</div>

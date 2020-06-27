@@ -1,0 +1,7 @@
+<% if !@combustible.last.nil?%>
+  Fecha de ultima carga: <%= @combustible.last.date%>
+<% end %>
+ Kilometraje de ultima carga : <%= @car.kilometer %>
+  <%= link_to "Cargar combustible", new_car_combustible_path(@car) %>
+    <%= render 'combustibles/index' %>
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_27_023745) do
+ActiveRecord::Schema.define(version: 2020_06_27_143811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_023745) do
 
   create_table "cars", force: :cascade do |t|
     t.string "name"
-    t.string "kilometer"
+    t.integer "kilometer"
     t.string "mantenimiento"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -46,11 +46,11 @@ ActiveRecord::Schema.define(version: 2020_06_27_023745) do
 
   create_table "combustibles", force: :cascade do |t|
     t.string "date"
-    t.string "liters"
-    t.string "total_price"
-    t.string "kilometers"
-    t.string "liter_price"
-    t.string "consumo_promedio"
+    t.float "liters"
+    t.float "total_price"
+    t.float "kilometers"
+    t.float "liter_price"
+    t.float "consumo_promedio"
     t.bigint "car_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_023745) do
     t.string "ruc"
     t.string "phone_number"
     t.date "data"
+    t.string "admin", default: "cliente"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

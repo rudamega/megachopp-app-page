@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Fecha</th>
+      <th scope="col">Litros</th>
+      <th scope="col">PrecioTotal</th>
+      <th scope="col">Kilometros</th>
+      <th scope="col">Precio/litro</th>
+      <th scope="col">Consumo Promedio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@combustible.each do |combus| %>
+      <tr>
+        <th scope="row"><%=combus.date%></th>
+        <td><%=combus.liters %></td>
+        <td><%=combus.total_price%></td>
+        <td><%=combus.kilometers%></td>
+        <td><%=combus.liter_price%></td>
+        <td><%=combus.consumo_promedio%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
