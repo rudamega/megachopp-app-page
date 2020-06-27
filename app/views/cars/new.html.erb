@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h3>Adicionar nuevo vehiculo</h3>
+
+      <%= simple_form_for(@car) do |f| %>
+        <%= f.input :name, label: "Vehiculo"%>
+        <%= f.input :kilometer, label: "Kilometraje"%>
+        <%= f.input :mantenimiento %>
+        <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
+        <%= f.input :photo, input_html: { class: 'd-none', id: 'photo-input' }, label_html: { class: 'upload-photo'}, label: '📷 Upload an item' %>
+
+        <div class="d-flex justify-content-center">
+        <%= f.submit "Crear Vehículo"%>
+        </div>
+      <% end %>
+      <%= link_to 'Back', root_path, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+</div>
