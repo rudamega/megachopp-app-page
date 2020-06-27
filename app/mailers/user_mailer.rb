@@ -9,4 +9,9 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email, subject: "Bienvenido"
   end
+
+  def notify(user)
+    @user = user
+    mail to: "ruben@megachopp.com.py", subject: "Nuevo cliente"
+  end
 end
