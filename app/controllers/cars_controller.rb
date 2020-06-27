@@ -6,6 +6,7 @@ class CarsController < ApplicationController
 
   def show
     @car = Car.find(params[:id])
+    @combustible = Combustible.where(car_id: params[:id]).order(id: :desc)
   end
 
   def new

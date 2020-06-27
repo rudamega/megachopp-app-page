@@ -2,4 +2,4 @@ Cliente registrado correctamente <br>
 Nro de cliente: <%= @user.id %> <br>
 Nombre: <%= @user.first_name %> <br>
 Correo : <%= @user.email %> <br>
-Fecha de registro: <%= DateTime.now%> <br>
+Fecha de registro: <%= Time.now.strftime("%I:%M - %m/%d/%Y")%> <br>
