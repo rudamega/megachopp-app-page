@@ -12,11 +12,12 @@ class CombustiblesController < ApplicationController
     @car = Car.find(params[:car_id])
     @combustible = Combustible.new(combus_params)
     @kilometers = @combustible.kilometers - @car.kilometer
-    @car.kilometer += @combustible.kilometers
+    @car.kilometer += @kilometers
     @car.save
     @combustible.car_id = params[:car_id]
     @combustible.date = Time.now.strftime("%I:%M - %m/%d/%Y")
     @combustible.liter_price = @combustible.total_price / @combustible.liters
+    @combustible.consumo_promedio = @kilometers / @combustible.liters
     @combustible.save
     redirect_to root_path
   end
