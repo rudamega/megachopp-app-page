@@ -23,6 +23,10 @@ gem 'redis', '~> 4.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
 gem 'mail', '~> 2.7', '>= 2.7.1'
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
