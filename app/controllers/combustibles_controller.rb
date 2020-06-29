@@ -12,7 +12,6 @@ class CombustiblesController < ApplicationController
     @car = Car.find(params[:car_id])
     @combustible = Combustible.new(combus_params)
     @kilometers = @combustible.kilometers - @car.kilometer
-    raise
     @car.kilometer += @kilometers
     @car.save
     @combustible.car_id = params[:car_id]
