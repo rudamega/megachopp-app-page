@@ -18,6 +18,7 @@ require 'capistrano/rbenv'
 require "capistrano/scm/git"
 require 'capistrano/rails/console'
 require 'capistrano/rails/collection'
+require 'capistrano/rails/db'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.6.6'
