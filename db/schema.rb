@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_210431) do
 
   create_table "cars", force: :cascade do |t|
     t.string "name"
-    t.integer "kilometer"
+    t.float "kilometer"
     t.string "mantenimiento"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
